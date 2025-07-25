@@ -1,0 +1,50 @@
+<%- include("partials/header") %>
+
+<div class="container mt-4">
+  <h2>Latest Posts</h2>
+
+  <% if (posts.length === 0) { %>
+    <p>No posts yet.</p>
+  <% } %>
+
+  <% posts.forEach(post => { %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="/posts/<%= post._id %>"><%= post.title %></a>
+        </h5>
+
+        <p class="card-text"><%= post.content.substring(0, 150) %>...</p>
+
+        <p class="card-text">
+          <small>Created: 
+            <% if (post.createdAt) { %>
+              <%= new Date(post.createdAt).toDateString() %>
+            <% } else { %>
+              Unknown
+            <% } %>
+          </small>
+        </p>
+
+        <p class="card-text">
+          <strong>Likes:</strong> <%= post.likes ? post.likes.length : 0 %>
+        </p>
+
+        <% if (currentUser) { %>
+          <form action="/like/<%= post._id %>" method="POST" class="d-inline">
+            <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
+          </form>
+
+          <% if (post.author === currentUser.name) { %>
+            <a href="/edit/<%= post._id %>" class="btn btn-sm btn-outline-secondary">Edit</a>
+            <form action="/delete/<%= post._id %>" method="POST" class="d-inline">
+              <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+            </form>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<%- include("partials/footer") %>

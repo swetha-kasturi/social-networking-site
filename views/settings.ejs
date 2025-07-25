@@ -1,0 +1,46 @@
+<%- include("partials/header") %>
+
+<div class="container mt-4">
+  <h2>Settings</h2>
+
+  <% if (success) { %>
+    <div class="alert alert-success"><%= success %></div>
+  <% } %>
+  <% if (error) { %>
+    <div class="alert alert-danger"><%= error %></div>
+  <% } %>
+
+  <hr>
+
+  <form action="/settings/profile" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label>Name</label>
+      <input name="name" class="form-control" value="<%= currentUser.name %>" required>
+    </div>
+    <div class="mb-3">
+      <label>Profile Image</label><br>
+      <% if (currentUser.profileImage) { %>
+        <img src="<%= currentUser.profileImage %>" width="100" class="mb-2 rounded"><br>
+      <% } %>
+      <input type="file" name="profileImage" class="form-control">
+    </div>
+    <button class="btn btn-primary">Update</button>
+  </form>
+
+  <hr>
+
+  <form action="/settings/password" method="POST">
+    <h5>Change Password</h5>
+    <div class="mb-3">
+      <label>Old Password</label>
+      <input type="password" name="oldPassword" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label>New Password</label>
+      <input type="password" name="newPassword" class="form-control" required>
+    </div>
+    <button class="btn btn-warning">Change Password</button>
+  </form>
+</div>
+
+<%- include("partials/footer") %>
