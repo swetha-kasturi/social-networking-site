@@ -22,12 +22,60 @@ A full-stack social networking web application where users can register, create 
 
 ## 🧰 Tech Stack
 
-| Frontend           | Backend              | Database          | Tools              |
-|--------------------|----------------------|-------------------|--------------------|
-| HTML, CSS, EJS     | Node.js, Express.js  | MongoDB + Mongoose| Git, GitHub, VSCode|
-| Bootstrap          | Passport.js, Multer  |                   |                    |
+| Frontend           | Backend              | Database          | Tools               |
+|--------------------|----------------------|-------------------|---------------------|
+| HTML, CSS, EJS     | Node.js, Express.js  | MongoDB + Mongoose| Git, GitHub, VSCode,|
+| Bootstrap          | Passport.js, Multer  |                   | connect-flash,dotenv|
 
 ---
 
 ## 📂 Project Structure
-<pre><code> ## 📂 Project Structure ``` social-networking-site/ ├── app.js ├── .env ├── .gitignore ├── package.json ├── /models │ ├── User.js │ ├── Post.js │ └── Comment.js ├── /routes │ ├── auth.js │ ├── post.js │ ├── user.js │ └── index.js ├── /views │ ├── partials/ │ ├── home.ejs │ ├── login.ejs │ ├── register.ejs │ ├── settings.ejs │ └── profile.ejs ├── /public │ ├── css/ │ │ └── style.css │ ├── js/ │ │ └── darkmode.js │ └── images/ │ └── default.png, icons, etc. ├── /uploads │ └── (user profile images) ``` </code></pre>
+social-networking-site/
+├── app.js
+├── package.json
+├── .env
+├── models/
+│   ├── User.js
+│   └── Post.js
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   ├── uploads/
+│   └── screenshots/
+├── views/
+│   ├── partials/
+│   │   ├── header.ejs
+│   │   └── footer.ejs
+│   ├── home.ejs
+│   ├── login.ejs
+│   ├── register.ejs
+│   ├── profile.ejs
+│   ├── settings.ejs
+│   ├── compose.ejs
+│   └── post.ejs
+
+---
+
+## 🔧 Installation & Running Locally
+
+1. Clone the repository  
+   `git clone https://github.com/Swetha0812/social-networking-site.git`
+
+2. Navigate to the folder  
+   `cd social-networking-site`
+
+3. Install dependencies  
+   `npm install`
+
+4. Create a .env file in the root folder and add:
+MONGO_URI=your_mongodb_connection_string
+SESSION_SECRET=your_session_secret
+
+5. Run the app  
+`node app.js` or `nodemon app.js`
+
+6. Visit `http://localhost:3000` in your browser.
+
+---
+
+
