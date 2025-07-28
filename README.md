@@ -67,8 +67,8 @@ social-networking-site/
 3. Install dependencies  
    `npm install`
 
-4. Create a .env file in the root folder and add:
-MONGO_URI=your_mongodb_connection_string
+4. Create a .env file in the root folder and add:  
+MONGO_URI=your_mongodb_connection_string  
 SESSION_SECRET=your_session_secret
 
 5. Run the app  
