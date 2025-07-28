@@ -30,29 +30,29 @@ A full-stack social networking web application where users can register, create 
 ---
 
 ## 📂 Project Structure
-social-networking-site/
-├── app.js
-├── package.json
-├── .env
-├── models/
-│   ├── User.js
-│   └── Post.js
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   ├── uploads/
-│   └── screenshots/
-├── views/
-│   ├── partials/
-│   │   ├── header.ejs
-│   │   └── footer.ejs
-│   ├── home.ejs
-│   ├── login.ejs
-│   ├── register.ejs
-│   ├── profile.ejs
-│   ├── settings.ejs
-│   ├── compose.ejs
-│   └── post.ejs
+social-networking-site/  
+├── app.js  
+├── package.json  
+├── .env  
+├── models/  
+│   ├── User.js  
+│   └── Post.js  
+├── public/  
+│   ├── css/  
+│   │   └── style.css  
+│   ├── uploads/  
+│   └── screenshots/  
+├── views/  
+│   ├── partials/  
+│   │   ├── header.ejs  
+│   │   └── footer.ejs  
+│   ├── home.ejs  
+│   ├── login.ejs  
+│   ├── register.ejs  
+│   ├── profile.ejs  
+│   ├── settings.ejs  
+│   ├── compose.ejs  
+│   └── post.ejs  
 
 ---
 
